@@ -15,6 +15,16 @@
       "continue": false
     },
     {
+      "src": "/logo\\.svg",
+      "dest": "/logo.svg",
+      "continue": false
+    },
+    {
+      "src": "/white-logo\\.svg",
+      "dest": "/white-logo.svg",
+      "continue": false
+    },
+    {
       "src": "/admin/(.*)",
       "dest": "https://payload-sigma-ten.vercel.app/admin/$1"
     }
