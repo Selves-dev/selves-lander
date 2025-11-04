@@ -195,7 +195,6 @@ import { useMediaUrl } from '../composables/useMediaUrl'
 // Removed missing type import for FooterType and MediaType
 import BaseButton from '@/components/ui/BaseButton.vue'
 import SectionHeader from '@/components/ui/SectionHeader.vue' // Import SectionHeader
-import whiteLogoUrl from '@/assets/images/white-logo.svg?url'
 import ctaShape from '@/assets/images/cta-shape.svg?url'
 
 const { getMediaUrl } = useMediaUrl()
@@ -340,8 +339,7 @@ const getEyebrowBgClass = (bgColorValue?: string | null) => {
   }
 }
 
-// Use Vite-bundled asset URL to ensure consistent paths across environments
-const whiteLogoSrc = whiteLogoUrl
+// White logo served from /public/white-logo.svg (no import required)
 </script>
 
 <style scoped>
