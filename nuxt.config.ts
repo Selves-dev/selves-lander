@@ -171,6 +171,7 @@ export default defineNuxtConfig({
       },
       '/pricing': { prerender: true }, // Static page can be prerendered
       '/book-a-demo': { prerender: true }, // Static page can be prerendered
+      '/favicon.svg': { headers: { 'cache-control': 'public, max-age=86400', 'content-type': 'image/svg+xml' } },
       '/favicon-v2.png': { headers: { 'cache-control': 'public, max-age=0, must-revalidate', 'content-type': 'image/png' } },
       '/_nuxt/**': { cache: { maxAge: 60 * 60 * 24 * 30 } },
     },

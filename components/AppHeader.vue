@@ -5,7 +5,7 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[72px]">
                   <NuxtLink to="/" class="flex items-center">
-                    <img :src="logoSrc" alt="Company Logo" class="h-[44px] w-auto" />
+                    <img src="/logo.svg" alt="Company Logo" class="h-[33px] w-auto" />
                   </NuxtLink>
                   <nav class="hidden lg:flex">
                     <ul class="flex items-center gap-[30px]">

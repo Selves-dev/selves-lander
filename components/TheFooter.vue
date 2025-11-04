@@ -75,11 +75,11 @@
                 to="/"
                 class="navbar-brand-footer inline-block"
               >
-                <img
-                  :src="whiteLogoSrc"
-                  :alt="siteName + ' Logo'"
-                  class="footer-logo h-9"
-                >
+                  <img
+                    src="/white-logo.svg"
+                    :alt="siteName + ' Logo'"
+                    class="footer-logo h-8"
+                  >
               </NuxtLink>
               <p
                 v-if="tagline"
