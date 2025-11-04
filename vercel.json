@@ -5,26 +5,6 @@
   "buildCommand": "pnpm run build",
   "routes": [
     {
-      "src": "/favicon\\.svg",
-      "dest": "/favicon.svg",
-      "continue": false
-    },
-    {
-      "src": "/favicon-v2\\.png",
-      "dest": "/favicon-v2.png",
-      "continue": false
-    },
-    {
-      "src": "/logo\\.svg",
-      "dest": "/logo.svg",
-      "continue": false
-    },
-    {
-      "src": "/white-logo\\.svg",
-      "dest": "/white-logo.svg",
-      "continue": false
-    },
-    {
       "src": "/admin/(.*)",
       "dest": "https://payload-sigma-ten.vercel.app/admin/$1"
     }
