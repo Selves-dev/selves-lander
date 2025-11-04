@@ -76,7 +76,7 @@
                 class="navbar-brand-footer inline-block"
               >
                   <img
-                    :src="publicBase + '/white-logo.svg'"
+                    :src="whiteLogoUrl"
                     :alt="siteName + ' Logo'"
                     class="footer-logo h-8"
                   />
@@ -210,6 +210,7 @@ const config = useRuntimeConfig()
 const payloadApiFullUrl = config.public.payloadApiFullUrl as string
 const siteName = computed(() => (config.public.siteName as string) || 'Site')
 const publicBase = computed(() => (config.public.siteUrl as string) || '')
+const whiteLogoUrl = computed(() => '/white-logo.svg')
 const footerEndpointPath = 'globals/footer?depth=2'
 
 const { data: footerData } = await useAsyncData<FooterType | null>(

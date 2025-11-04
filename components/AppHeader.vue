@@ -5,7 +5,7 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-[72px]">
                   <NuxtLink to="/" class="flex items-center">
-                    <img src="/logo.svg" alt="Company Logo" class="h-[33px] w-auto" />
+                    <img :src="logoUrl" alt="Company Logo" class="h-[33px] w-auto" />
                   </NuxtLink>
                   <nav class="hidden lg:flex">
                     <ul class="flex items-center gap-[30px]">
@@ -62,6 +62,7 @@ const mobileMegaMenuOpen = ref(false)
 // to avoid the compiler converting the string into an import.
 const runtimeConfig = useRuntimeConfig()
 const publicBase = computed(() => (runtimeConfig.public?.siteUrl as string) || '')
+const logoUrl = computed(() => '/logo.svg')
 
 const toggleMegaMenu = () => {
   if (window.innerWidth < 1024) {
