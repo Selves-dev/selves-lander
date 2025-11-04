@@ -76,10 +76,10 @@
                 class="navbar-brand-footer inline-block"
               >
                   <img
-                    src="/white-logo.svg"
+                    :src="publicBase + '/white-logo.svg'"
                     :alt="siteName + ' Logo'"
                     class="footer-logo h-8"
-                  >
+                  />
               </NuxtLink>
               <p
                 v-if="tagline"
@@ -209,6 +209,7 @@ const handleSubscribe = () => {
 const config = useRuntimeConfig()
 const payloadApiFullUrl = config.public.payloadApiFullUrl as string
 const siteName = computed(() => (config.public.siteName as string) || 'Site')
+const publicBase = computed(() => (config.public.siteUrl as string) || '')
 const footerEndpointPath = 'globals/footer?depth=2'
 
 const { data: footerData } = await useAsyncData<FooterType | null>(
