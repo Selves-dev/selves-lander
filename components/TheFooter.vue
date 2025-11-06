@@ -196,6 +196,7 @@ import { useMediaUrl } from '../composables/useMediaUrl'
 import BaseButton from '@/components/ui/BaseButton.vue'
 import SectionHeader from '@/components/ui/SectionHeader.vue' // Import SectionHeader
 import ctaShape from '@/assets/images/cta-shape.svg?url'
+import whiteLogoImage from '@/assets/images/white-logo.svg'
 
 const { getMediaUrl } = useMediaUrl()
 const emailForSubscription = ref('')
@@ -209,8 +210,8 @@ const handleSubscribe = () => {
 const config = useRuntimeConfig()
 const payloadApiFullUrl = config.public.payloadApiFullUrl as string
 const siteName = computed(() => (config.public.siteName as string) || 'Site')
-const publicBase = computed(() => (config.public.siteUrl as string) || '')
-const whiteLogoUrl = computed(() => '/white-logo.svg')
+// White logo imported explicitly from assets to ensure it's bundled correctly
+const whiteLogoUrl = whiteLogoImage
 const footerEndpointPath = 'globals/footer?depth=2'
 
 const { data: footerData } = await useAsyncData<FooterType | null>(
@@ -341,7 +342,7 @@ const getEyebrowBgClass = (bgColorValue?: string | null) => {
   }
 }
 
-// White logo served from /public/white-logo.svg (no import required)
+// White logo imported from assets and bundled by Vite
 </script>
 
 <style scoped>

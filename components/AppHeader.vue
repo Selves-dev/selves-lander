@@ -51,18 +51,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
+import logoImage from '@/assets/images/logo.svg'
+
 const isMobileMenuOpen = ref(false)
 const megaMenuVisible = ref(false)
 const mobileMegaMenuOpen = ref(false)
 
-// Logo served from /public/logo.svg — build tools may rewrite plain "/logo.svg" into a
-// compile-time import on some CI environments (Vite/Rollup). Use a runtime-bound URL
-// to avoid the compiler converting the string into an import.
-const runtimeConfig = useRuntimeConfig()
-const publicBase = computed(() => (runtimeConfig.public?.siteUrl as string) || '')
-const logoUrl = computed(() => '/logo.svg')
+// Logo imported explicitly from assets to ensure it's bundled correctly
+const logoUrl = logoImage
 
 const toggleMegaMenu = () => {
   if (window.innerWidth < 1024) {
