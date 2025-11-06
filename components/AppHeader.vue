@@ -53,13 +53,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
-import logoImage from '@/assets/images/logo.svg'
+import logoImage from '@/assets/images/logo.svg?url'
 
 const isMobileMenuOpen = ref(false)
 const megaMenuVisible = ref(false)
 const mobileMegaMenuOpen = ref(false)
 
-// Logo imported explicitly from assets to ensure it's bundled correctly
+// Logo imported with ?url to get the actual file path
 const logoUrl = logoImage
 
 const toggleMegaMenu = () => {

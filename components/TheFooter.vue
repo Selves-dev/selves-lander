@@ -196,7 +196,7 @@ import { useMediaUrl } from '../composables/useMediaUrl'
 import BaseButton from '@/components/ui/BaseButton.vue'
 import SectionHeader from '@/components/ui/SectionHeader.vue' // Import SectionHeader
 import ctaShape from '@/assets/images/cta-shape.svg?url'
-import whiteLogoImage from '@/assets/images/white-logo.svg'
+import whiteLogoImage from '@/assets/images/white-logo.svg?url'
 
 const { getMediaUrl } = useMediaUrl()
 const emailForSubscription = ref('')
