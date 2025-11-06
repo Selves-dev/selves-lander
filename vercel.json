@@ -5,14 +5,19 @@
   "buildCommand": "pnpm run build",
   "routes": [
     {
-      "src": "/(logo\\.svg|white-logo\\.svg|favicon.*)",
-      "headers": {
-        "cache-control": "public, max-age=86400"
-      }
-    },
-    {
       "src": "/admin/(.*)",
       "dest": "https://payload-sigma-ten.vercel.app/admin/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(logo\\.svg|white-logo\\.svg|favicon.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
     }
   ],
   "github": {
